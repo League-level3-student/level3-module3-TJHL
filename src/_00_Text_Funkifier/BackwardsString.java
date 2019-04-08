@@ -3,8 +3,7 @@ package _00_Text_Funkifier;
 public class BackwardsString extends SpecialString {
 
 	public BackwardsString(String s) {
-		super(s);
-		
+		super(s);	
 	}
 
 	@Override
