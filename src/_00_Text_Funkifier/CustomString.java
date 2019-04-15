@@ -1,69 +1,43 @@
 package _00_Text_Funkifier;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.util.HashMap;
 
 public class CustomString extends SpecialString{
 	
+	HashMap <Character, Character> engAusKey = new HashMap <Character, Character>();
+	//this is an australian test
 	public CustomString(String s) {
 		super(s);
+		engAusKey.put('a', 'ɐ');
+		engAusKey.put('e', 'ǝ');
+		engAusKey.put('h', 'ɥ');
+		engAusKey.put('i', 'ᴉ');
+		engAusKey.put('l', 'l');
+		engAusKey.put('n', 'u');
+		engAusKey.put('r', 'ɹ');
+		engAusKey.put('s', 's');
+		engAusKey.put('t', 'ʇ');
+		engAusKey.put('u', 'n');
+		engAusKey.put('T', '┴');
+		engAusKey.put(' ', ' ');
 		}
-//	HashMap <Integer , String> keyNormal = new HashMap<Integer , String>();
-//	HashMap <Integer , String> keyAussie = new HashMap<Integer , String>();
-	
 	
 	@Override
 	public String funkifyText(String s) {
-		String a = "";
-		String reverseText ="";
 		String aussieText ="";
-		BackwardsString(String s);
+		String reverseText ="";
+		for (int i = s.length()-1; i > -1; i--) {
+			reverseText=reverseText+s.charAt(i);
+		}
 			
-		//reverseText = BackwardsString.funkifyText(s);
+		for (int i = 0; i < reverseText.length()-1; i++) {
+			aussieText= aussieText + (engAusKey.get(reverseText.charAt(i)));
 			
-		for (int i = 0; i < reverseText.length(); i++) {
-			reverseText.charAt(i);
 		}	
-		
+		System.out.println(aussieText);
 		
 		return aussieText;
 	}
 }
-	/*
-¡
-˙
-0
-6
-8
-ㄥ
-9
-ϛ
-ㄣ
-ᄅ
-Ɩ
-z
-ʎ
-x
-ʍ
-ʌ
-n
-ʇ
-s
-ɹ
-b
-d
-o
-u
-ɯ
-l
-ʞ
-ɾ
-ᴉ
-ɥ
-ƃ
-ɟ
-ǝ
-p
-ɔ
-q
-ɐ
-	*/

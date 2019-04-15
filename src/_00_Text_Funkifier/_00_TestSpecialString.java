@@ -38,8 +38,8 @@ public class _00_TestSpecialString {
 	//   the JUnitTest case below to test your customized Special String.
 	@Test
 	public void testCustomString() {
-		SpecialString cs = new CustomString("This is an australian test");
+		SpecialString cs = new CustomString("this is an australian test");
 		System.out.println(cs);
-		assertEquals("Thiis an australian test", cs.toString());
+		assertEquals("ʇsǝʇ uɐᴉlɐɹʇsnɐ uɐ sᴉ sᴉɥʇ", cs.toString());
 	}
 }
