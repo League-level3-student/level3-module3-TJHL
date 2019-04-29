@@ -4,6 +4,7 @@ public abstract class Animal {
 	
 	abstract void makeNoise();
 	
+	abstract void interact();
 	void live() {
 		
 	}
